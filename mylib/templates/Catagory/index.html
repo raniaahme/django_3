@@ -1,0 +1,26 @@
+{%extends 'parentpage.html'%}
+{%block title%}
+Catagoory List
+{%endblock%}
+ {%block content%}
+<table border="1" width="100%">
+  <tr>
+   <th>ID</th>
+   <th>Name</th>
+   <th>Actions</th>
+  </tr>
+ {%for cat in catagories%}
+ <tr>
+  <td>{{cat.id}}</td>
+  <td>{{cat.name}}</td>
+  <td>
+   <a href="{%url 'Catagory_Update' cat.id%}">Update</a>
+   <a href>delete</a>
+  </td>
+ </tr>
+
+{%endfor%}
+
+</table>
+
+{%endblock%}
